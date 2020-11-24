@@ -1,0 +1,20 @@
+THIS PROJECT FOR DEMONSTRATE HOW TO DO SOME ADDITIONAL WORK AFTER AN TRANSACTION COMMITED
+
+1. First setup DataSource.groovy
+2. Add *mavenRepo "https://oauth.googlecode.com/svn/code/maven"* in *repositories* to BuildConfig.groovy
+3. Add below dependencies to *dependencies* in BuildConfig.groovy
+    compile "org.springframework:spring-orm:$springVersion"
+    runtime 'mysql:mysql-connector-java:5.1.29'
+    runtime 'org.springframework:spring-test:4.0.5.RELEASE'
+4. Add a controller named *HomeController.groovy*
+5. Add a service named *HomeService.groovy*
+6. Add a domain named *Home.groovy*
+
+MOST IMPORTANT PARTS:
+7. Add below groovy files
+named *org.codehaus.groovy.grails.orm.hibernate.GrailsHibernateTransactionManager.groovy*
+named *org.codehaus.groovy.grails.orm.hibernate.TransactionStatus.groovy*
+named *org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.groovy*
+under *src/groovy*
+
+8. You are done! See *HomeService.groovy* to see how you can use this feature in Grails project.

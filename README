@@ -1,7 +1,13 @@
 THIS PROJECT FOR DEMONSTRATE HOW TO DO SOME ADDITIONAL WORK AFTER AN TRANSACTION COMMITED
 
 1. First setup DataSource.groovy
-2. Add *mavenRepo "https://oauth.googlecode.com/svn/code/maven"* in *repositories* to BuildConfig.groovy
+2. Add below maven repo in BuildConfig.groovy
+    mavenRepo "http://central.maven.org/maven2"
+    mavenRepo "https://oauth.googlecode.com/svn/code/maven"
+    mavenRepo "https://mvnrepository.com/repos/central"
+    mavenRepo "http://repo.grails.org/grails/core"
+    mavenRepo "http://repo.grails.org/grails/plugins"
+
 3. Add below dependencies to *dependencies* in BuildConfig.groovy
     compile "org.springframework:spring-orm:$springVersion"
     runtime 'mysql:mysql-connector-java:5.1.29'
@@ -18,3 +24,5 @@ named *org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.groovy*
 under *src/groovy*
 
 8. You are done! See *HomeService.groovy* to see how you can use this feature in Grails project.
+
+9. Add VMOptions in case you are using IntellijIDEA [-Xmx1400m -Xms1400m -XX:MaxPermSize=1400m -Dserver.port=5678]

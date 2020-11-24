@@ -8,7 +8,7 @@ class HomeService {
     void saveEntity() {
         TransactionStatus.current.onCommit {
             println("YES!!! TRANSACTION COMMITTED SUCCESSFULLY!!!")
-            println("HOME COUNT ${Home.count()}")
+            println("HOME COUNT ${Home.count()} AFTER COMMIT DONE")
         }
 
         Home home = new Home()
